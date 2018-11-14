@@ -11,6 +11,7 @@
 }
 
 .main {
+    min-width: 250px;
     max-width: 60rem;
     margin: 0 auto;
 }
@@ -44,20 +45,24 @@ header a {
 nav {
     background: #707070;
     border: 4px solid white;
-    height: 60px;
+    min-height: 60px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-
 }
 
-nav ul {
+.nav-list {
     display: none;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin: 0 10px;
+    padding-top: 12px;
     max-width: 500px;
+    flex-direction: column;
+    position: relative;
+
+}
+
+nav li {
+    margin: 15px 0px;
 }
 
 nav a {
@@ -65,6 +70,79 @@ nav a {
     font-size: 1.25rem;
     text-transform: uppercase;
 }
+
+nav a:hover {
+    color: #2699FB;
+}
+
+/* Hamburger icon */
+input[type=checkbox] {
+    position: absolute;
+    left: 6px;
+    top: 90px;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    cursor: pointer;
+  }
+                
+  #hamburger {
+    top: 92px;
+    left: 7px;
+    width: 45px;
+    height: 50px;
+    position: absolute;
+  }
+  
+  #hamburger span {
+    display: block;
+    position: absolute;
+    height: 12px;
+    width: 100%;
+    background: #fff;
+    /* left: 0;  */
+    transition: .2s ease;
+  }
+
+  input[type=checkbox]:hover ~ #hamburger span {
+      background: #2699FB;
+  }
+
+  /* Style spans to display top, middle and bottom part of burger */
+  #hamburger span:nth-child(1) {
+    top: 0px;
+  }
+  
+  #hamburger span:nth-child(2) {
+    top: 17px;
+  }
+  
+  #hamburger span:nth-child(3) {
+    top: 34px;
+  }
+  
+  /* Transform burger elements to a X */
+
+  input[type=checkbox]:checked ~ #hamburger span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 17px;
+  }
+  
+  input[type=checkbox]:checked ~ #hamburger span:nth-child(2) {
+    width: 0;
+    opacity: 0;
+  }
+  
+  input[type=checkbox]:checked ~ #hamburger span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 17px;
+  }
+
+  /* Unhide navigation ul when the button is pressed */
+  input[type=checkbox]:checked ~ .nav-list {
+      display: flex;
+  }
 
 footer {
     background: #000;
@@ -95,19 +173,6 @@ article h2 {
     font-size: 1.5rem;
     max-width: 220px;
 }
-
-/* h2 {
-    font-family: Arial, Helvetica, sans-serif;
-    
-    flex: 100%;
-    text-align: center;
-    vertical-align: center;
-    align-self: center;
-    font-weight: normal;
-    font-size: 1.5rem;
-    color: #fff;
-    text-transform: uppercase;
-} */
 
 article:not(:first-of-type) {
     display: none;
@@ -156,9 +221,18 @@ figure {
     }
     nav {
         border: 2px solid #fff;
+        justify-content: center;
+        align-items: center;
     }
-    nav ul {
+    .nav-list {
         display: flex;
+        padding: 0px 10px;
+        
+        flex-direction: row;
+    }
+
+    input[type-checkbox], #hamburger {
+        display: none;
     }
 
     article:not(:first-of-type) {
@@ -173,14 +247,6 @@ figure {
         max-width: 376px;
         font-size: 2.75rem;
     }
-
-    /* article:nth-of-type(n) {
-        display: flex;
-        flex: 100%;
-        max-width: 100%;
-        font-size: 2.75rem;
-
-    } */
 
     article:nth-of-type(4) {
         display: flex;

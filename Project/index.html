@@ -14,8 +14,18 @@
                 <a href="index.html">COMPANY NAME</a>
             </h1>
         </header>
+
         <nav>
-            <ul>
+            <!-- Implement hamburger icon with spans since IE 11 struggles with SVG animations -->
+            <input type="checkbox" role="button">
+
+            <menu id="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </menu>
+
+            <ul class="nav-list">
                 <li>
                     <a href="product.html">Products</a>
                 </li>
@@ -30,7 +40,7 @@
             </ul>
         </nav>
 
-        <section class='index'>
+        <section class="index">
             <article>
                 <h2>we are entertainment</h2>
             </article>
