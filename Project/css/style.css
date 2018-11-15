@@ -10,6 +10,14 @@
     box-sizing: border-box;
 }
 
+  /* Add the font "Hack-Bold" locally */
+@font-face {
+    font-family: 'Hack';
+    src: url('../fonts/Hack-Bold.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/Hack-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/Hack-Bold.svg#Hack-Bold') format('svg'); /* Legacy iOS */
+}
+
 .main {
     min-width: 250px;
     max-width: 60rem;
@@ -39,6 +47,7 @@ header a {
     font-size: 2rem;
     color: #fff;
     text-align: center;
+    font-family: Hack, sans-serif;
 
 }
 
@@ -220,7 +229,7 @@ figure {
         text-shadow: #000 2px 0px 0px, #000 1.75517px 0.958851px 0px, #000 1.0806px 1.68294px 0px, #000 0.141474px 1.99499px 0px, #000 -0.832294px 1.81859px 0px, #000 -1.60229px 1.19694px 0px, #000 -1.97998px 0.28224px 0px, #000 -1.87291px -0.701566px 0px, #000 -1.30729px -1.5136px 0px, #000 -0.421592px -1.95506px 0px, #000 0.567324px -1.91785px 0px, #000 1.41734px -1.41108px 0px, #000 1.92034px -0.558831px 0px;
     }
     nav {
-        border: 2px solid #fff;
+        border: 1px solid #fff;
         justify-content: center;
         align-items: center;
     }
@@ -245,7 +254,7 @@ figure {
 
     article h2 {
         max-width: 376px;
-        font-size: 2.75rem;
+        font-size: 3rem;
     }
 
     article:nth-of-type(4) {
@@ -289,7 +298,7 @@ figure {
     }
 
     header a {
-        font-size: 5rem;
+        font-size: 5.25rem;
     }
 }
 
@@ -301,7 +310,7 @@ figure {
     }
 
     header a {
-        font-size: 6rem;
+        font-size: 6.5rem;
         text-shadow: #000 3px 0px 0px,
         #000 2.83487px 0.981584px 0px,
         #000 2.35766px 1.85511px 0px,
@@ -322,9 +331,7 @@ figure {
         #000 2.44769px -1.73459px 0px,
         #000 2.88051px -0.838247px 0px;
     }
-    nav {
-        border: 1px solid #fff;
-    }
+
     nav a {
         font-size: 1.5rem;
     }
