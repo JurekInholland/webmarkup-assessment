@@ -273,6 +273,26 @@ figure {
 
 }
 
+/* Additional breakpoint to smooth things out */
+@media screen and (min-width: 651px) {
+    figure {
+        height: 430px;
+    }
+
+    article {
+        height: 230px;
+    }
+
+    article h2 {
+        font-size: 4.5rem;
+        max-width: 620px;
+    }
+
+    header a {
+        font-size: 5rem;
+    }
+}
+
 @media screen and (min-width: 961px) {
     body {
         background-image: url(../img/background.jpeg);
@@ -317,9 +337,6 @@ figure {
     }
     article:nth-of-type(n) {
         display: flex;
-    }
-    article {
-        height: 14rem;
     }
 
     article h2 {
