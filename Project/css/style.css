@@ -511,7 +511,7 @@ input[type=submit]:active {
 
     /* Does not work in IE11 without vendor prefix. But the color is close enough not to worry. */
     ::placeholder {
-        opacity: 100;
+        opacity: 1;
         color: #AAA;
     }
 
