@@ -21,6 +21,10 @@ html {
     url('../fonts/Hack-Bold.svg#Hack-Bold') format('svg'); /* Legacy iOS */
 }
 
+video {
+    display: none;
+}
+
 .main {
     min-width: 250px;
     max-width: 960px;
@@ -539,11 +543,13 @@ input[type=submit]:active {
 }
 
 @media screen and (min-width: 961px) {
-    body {
-        background-image: url(../img/background.jpeg);
-        height: auto;
-        background-repeat: no-repeat;
-        background-size: cover;
+
+    /* enable background video */
+    video {
+        display: block;
+        position: absolute;
+        z-index: -1;
+        max-width: 100%;
     }
 
     header a {
