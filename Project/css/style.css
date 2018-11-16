@@ -13,8 +13,8 @@ html {
     font-size: 16px;
 }
 
-  /* Add the font "Hack-Bold" locally */
-@font-face {
+    /* Add the font "Hack-Bold" locally */
+    @font-face {
     font-family: 'Hack';
     src: url('../fonts/Hack-Bold.woff') format('woff'), /* Modern Browsers */
     url('../fonts/Hack-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
@@ -168,7 +168,6 @@ footer {
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: .8 rem;
 }
 
 footer p {
@@ -431,7 +430,7 @@ input[type=submit]:active {
     }
 
     article h2 {
-        max-width: 376px;
+        max-width: 420px;
         font-size: 3rem;
     }
 
@@ -512,7 +511,7 @@ input[type=submit]:active {
 
     /* Does not work in IE11 without vendor prefix. But the color is close enough not to worry. */
     ::placeholder {
-        opacity: 100%;
+        opacity: 100;
         color: #AAA;
     }
 
@@ -649,7 +648,6 @@ input[type=submit]:active {
     }
 
     fieldset:nth-of-type(1) {
-        /* padding: 10px 8px 8px 8px; */
         padding: 8px;
     }
 
@@ -659,7 +657,6 @@ input[type=submit]:active {
     }
 
     select {
-        /* display: inline; */
         float: right;
         width: 600px;
         margin: 0;
