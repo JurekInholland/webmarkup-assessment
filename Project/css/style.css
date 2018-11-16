@@ -2,12 +2,15 @@
     padding: 0;
     margin: 0;
     border: 0;
-    text-decoration: none;
-    color: #000;
     font-weight: normal;
+    text-decoration: none;
     font-family: Arial, sans-serif;
     list-style-type: none;
     box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
 }
 
   /* Add the font "Hack-Bold" locally */
@@ -20,7 +23,7 @@
 
 .main {
     min-width: 250px;
-    max-width: 60rem;
+    max-width: 960px;
     margin: 0 auto;
 }
 
@@ -113,7 +116,6 @@ input[type=checkbox] {
     height: 12px;
     width: 100%;
     background: #fff;
-    /* left: 0;  */
     transition: .2s ease;
   }
 
@@ -134,7 +136,7 @@ input[type=checkbox] {
     top: 34px;
   }
   
-  /* Transform burger elements to a X */
+  /* Transform burger elements to an X once the hidden checkbox is checked*/
 
   input[type=checkbox]:checked ~ #hamburger span:nth-child(1) {
     transform: rotate(45deg);
@@ -222,11 +224,11 @@ figure {
 /* Products page */
 /* ############# */
 
-.banner {
+.banner, .contact-banner {
     height: 48px;
 }
 
-.banner h2 {
+.banner h2, .contact-banner h2 {
     max-width: 100%;
 }
 
@@ -290,6 +292,86 @@ figure {
     background-image: url(../img/small/product12.jpg);
 }
 
+/* Contact Page */
+/* ############ */
+
+.contact {
+    background: #F5F5F5;
+}
+
+.contact h3 {
+    display: none;
+}
+
+form {
+    margin: 1.5rem;
+    overflow: hidden;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+label, form, fieldset, select {
+    font-size: 1rem;
+    color: #707070;
+}
+
+fieldset {
+    padding: 0;
+    margin: 1rem 0;
+    border: 2px solid #707070;
+    background: #fff;
+    min-height: 30px;
+}
+
+fieldset:nth-of-type(1) {
+    padding: 5px;
+}
+
+select {
+    margin-top: 10px;
+    width: 100%;
+    overflow: hidden;
+    border: 2px solid #707070;
+    color: #707070;
+}
+
+input[type=text], input[type=email], textarea {
+    line-height: 2rem;
+    width: 100%;
+    padding-left: 8px;
+    min-height: 32px;
+}
+
+textarea {
+    display: block;
+    resize: vertical;
+    min-height: 5rem;
+}
+
+input[type=submit] {
+    width: 100%;
+    height: 2rem;
+    font-size: 1.25rem;
+    border: 2px solid rgba(0, 0, 0, .25);
+    background: #2699FB;
+    color: #fff;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    right: -0.125rem;
+}
+
+input[type=submit]:hover {
+    cursor: pointer;
+    color: #2699FB;
+    background: #fff;
+    border-color: #2699FB;
+}
+
+input[type=submit]:active {
+    color: #444;
+}
+
 /* Media Querries */
 /* ############## */
 
@@ -300,7 +382,19 @@ figure {
     }
     header a {
         font-size: 2.5rem;
-        text-shadow: #000 2px 0px 0px, #000 1.75517px 0.958851px 0px, #000 1.0806px 1.68294px 0px, #000 0.141474px 1.99499px 0px, #000 -0.832294px 1.81859px 0px, #000 -1.60229px 1.19694px 0px, #000 -1.97998px 0.28224px 0px, #000 -1.87291px -0.701566px 0px, #000 -1.30729px -1.5136px 0px, #000 -0.421592px -1.95506px 0px, #000 0.567324px -1.91785px 0px, #000 1.41734px -1.41108px 0px, #000 1.92034px -0.558831px 0px;
+        text-shadow: #000 2px 0px 0px,
+        #000 1.75517px 0.958851px 0px,
+        #000 1.0806px 1.68294px 0px,
+        #000 0.141474px 1.99499px 0px,
+        #000 -0.832294px 1.81859px 0px,
+        #000 -1.60229px 1.19694px 0px,
+        #000 -1.97998px 0.28224px 0px,
+        #000 -1.87291px -0.701566px 0px,
+        #000 -1.30729px -1.5136px 0px,
+        #000 -0.421592px -1.95506px 0px,
+        #000 0.567324px -1.91785px 0px,
+        #000 1.41734px -1.41108px 0px,
+        #000 1.92034px -0.558831px 0px;
     }
     nav {
         border: 1px solid #fff;
@@ -360,7 +454,7 @@ figure {
         font-size: 1.25rem;
     }
 
-    .banner {
+    .banner, .contact-banner {
         display: none;
     }
 
@@ -374,6 +468,50 @@ figure {
         border-right: 7px solid #fff;
         border-left: 7px solid #fff;
     }
+
+    fieldset:nth-of-type(1) {
+        padding: 1rem;
+    }
+
+    label {
+        font-size: 2rem;
+    }
+    
+    textarea {
+        font-size: 2rem;
+    }
+
+    input {
+        font-size: 2rem;
+    }
+
+    select {
+        font-size: 2rem;
+    }
+
+    input[type=text], input[type=email] {
+        height: 60px;
+        
+    }
+    input[type=text], input[type=email], textarea {
+        padding-left: 1rem;
+    }
+
+    textarea {
+        padding-top: 1rem;
+    }
+
+    input[type=submit] {
+        height: 3rem;
+        font-size: 2rem;
+    }
+
+    /* Does not work in IE11 without vendor prefix. But the color is close enough not to worry. */
+    ::placeholder {
+        opacity: 100%;
+        color: #AAA;
+    }
+
 }
 
 /* Additional breakpoint to smooth things out */
@@ -403,8 +541,9 @@ figure {
 @media screen and (min-width: 961px) {
     body {
         background-image: url(../img/background.jpeg);
+        height: auto;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
     }
 
     header a {
@@ -457,7 +596,7 @@ figure {
         font-size: 1.75rem;
     }
 
-    .banner {
+    .banner, .contact-banner {
         display: flex;
         height: 120px;
     }
@@ -471,7 +610,8 @@ figure {
     }
 
     .gallery {
-        margin: 0 0 14px 0;
+        margin: 0;
+        border-bottom: 14px solid #fff;
     }
 
     .gallery a {
@@ -486,5 +626,42 @@ figure {
 
     .gallery a:nth-of-type(3n) {
         border-right: 14px solid #fff;
+    }
+
+    .contact h3 {
+        display: block;
+        font-size: 2rem;
+        color: #707070;
+        margin: 1.75rem;
+        margin-bottom: 0;
+    }
+
+    form {
+        margin: 1rem 4rem;
+        margin-top: 0;
+        font-size: 2rem;
+    }
+
+    fieldset:nth-of-type(1) {
+        /* padding: 10px 8px 8px 8px; */
+        padding: 8px;
+    }
+
+    label {
+        float: left;
+        padding-top: 3px;
+    }
+
+    select {
+        /* display: inline; */
+        float: right;
+        width: 600px;
+        margin: 0;
+        
+    }
+
+    input[type=submit] {
+        margin-top: 0;
+        margin-bottom: 2rem;
     }
 }
