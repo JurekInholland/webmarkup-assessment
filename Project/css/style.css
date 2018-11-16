@@ -25,6 +25,10 @@ video {
     display: none;
 }
 
+h6 {
+    display: none;
+}
+
 .main {
     min-width: 250px;
     max-width: 960px;
