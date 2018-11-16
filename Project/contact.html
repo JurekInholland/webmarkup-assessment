@@ -1,42 +1,102 @@
-COMPANY NAME
-Home
-Product
-Contact
-More information
-<form action="nowhere.php" method="post">
-	<fieldset>
-		<label >Select topic</label>
-		<select>
-			<option value="general">General inquiries</option>
-			<option value="press">Press relations</option>
-			<option value="recruitement">Recruitement</option>
-		</select>
-	</fieldset>
-	<fieldset class="contactFormFieldset">
-		<input
-				type="text"
-				name="contactFormName"
-				placeholder="Your name.."
-		/>
-	</fieldset>
-	<fieldset class="contactFormFieldset">
-		<input
-				type="email"
-				name="email"
-				placeholder="Your email.."
-		/>
-	</fieldset>
-	<fieldset>
-		<textarea
-				rows="7"
-				cols="40"
-				name="message"
-				placeholder="Write something.."
-		></textarea>
-	</fieldset>
-	<input
-			type="submit"
-			value="Submit"
-	/>
-</form>
-2018 - Student name - Inholland 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="inholland, gaming, games, entertainment, contact, contact us, feedback, mail, mail us">
+    <meta name="description" content="If you seek more information, feel free to contact us!">
+        <meta name="author" content="Jurek Baumann">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+        <link rel="stylesheet" href="css/style.css">
+
+        <title>Contact Us | Give feedback</title>
+    </head>
+    <body>
+        <section class="main">
+            <header>
+                <h1>
+                    <a href="index.html">COMPANY NAME</a>
+                </h1>
+            </header>
+
+            <nav>
+                <!-- Implement hamburger icon with spans since IE 11 struggles with SVG animations -->
+                <input type="checkbox" role="button">
+
+                <menu id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </menu>
+
+                <ul class="nav-list">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="product.html">Product</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <section class="contact">
+				<article class="contact-banner">
+					<h2>contact</h2>
+				</article>
+
+				<h3>More information</h3>
+
+				<form action="nowhere.php" method="post">
+					<fieldset>
+						<label >Select topic</label>
+						<select>
+							<option value="general">General inquiries</option>
+							<option value="press">Press relations</option>
+							<option value="recruitement">Recruitement</option>
+						</select>
+					</fieldset>
+					<fieldset class="contactFormFieldset">
+						<input
+								type="text"
+								name="contactFormName"
+								placeholder="Your name.."
+						/>
+					</fieldset>
+					<fieldset class="contactFormFieldset">
+						<input
+								type="email"
+								name="email"
+								placeholder="Your email.."
+						/>
+					</fieldset>
+					<fieldset>
+						<textarea
+								rows="7"
+								cols="40"
+								name="message"
+								placeholder="Write something.."
+						></textarea>
+					</fieldset>
+					<input
+							type="submit"
+							value="Submit"
+					/>
+				</form>
+            </section>
+            <footer>
+                <p>&copy; 2018 Jurek Baumann - Inholland</p>
+            </footer>
+        </section>
+    </body>
+</html>
